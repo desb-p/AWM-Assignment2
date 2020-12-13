@@ -140,7 +140,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Added for Whitenoise
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Added for Login/ Logout
 LOGIN_REDIRECT_URL = 'home'
@@ -164,8 +164,8 @@ LEAFLET_CONFIG = {
     'OPACITY': 0.5,
 }
 
-# CSRF_COOKIE_SECURE = env("CSRF_COOKIE_SECURE")
-# SESSION_COOKIE_SECURE = env("SESSION_COOKIE_SECURE")
+CSRF_COOKIE_SECURE = env("CSRF_COOKIE_SECURE")
+SESSION_COOKIE_SECURE = env("SESSION_COOKIE_SECURE")
 
 
 #Define STATICFILES_DIRS for your custom PWA_APP_ICONS
@@ -175,41 +175,12 @@ STATICFILES_DIRS = [
 
 
 
-PWA_APP_NAME = 'My App'
-PWA_APP_DESCRIPTION = "My app description"
-PWA_APP_THEME_COLOR = '#0A0302'
-PWA_APP_BACKGROUND_COLOR = '#ffffff'
-PWA_APP_DISPLAY = 'standalone'
-PWA_APP_SCOPE = '/'
-PWA_APP_ORIENTATION = 'any'
-PWA_APP_START_URL = '/'
-PWA_APP_STATUS_BAR_COLOR = 'default'
-PWA_APP_ICONS = [
-    {
-        'src': '/static/images/my_app_icon.png',
-        'sizes': '160x160'
-    }
-]
-PWA_APP_ICONS_APPLE = [
-    {
-        'src': '/static/images/my_apple_icon.png',
-        'sizes': '160x160'
-    }
-]
-PWA_APP_SPLASH_SCREEN = [
-    {
-        'src': '/static/images/icons/splash-640x1136.png',
-        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
-    }
-]
-PWA_APP_DIR = 'ltr'
-PWA_APP_LANG = 'en-US'
 
 #PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'templates', 'serviceworker.js')
 
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'ca2app/templates/serviceworker.js')
-PWA_APP_NAME = 'Geodjango'
-PWA_APP_DESCRIPTION = "Geodjango description"
+PWA_APP_NAME = 'Ca2App'
+PWA_APP_DESCRIPTION = "Mapping Location"
 PWA_APP_THEME_COLOR = '#0A0302'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'
